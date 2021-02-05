@@ -20,7 +20,7 @@ export class MenuComponent implements OnInit {
 
   //! NOTE: at the moment, these properties can be only used inside the menu template and not in components that extends it or that it implements
 
-  ngOnInit() {
+  ngOnInit() { //this is the first method that will be called after the constructor. it can only be called ONCE per class and it's used to initalie some internal properties or to call methods of a certain service
 
   }
 
