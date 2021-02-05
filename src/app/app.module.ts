@@ -9,7 +9,7 @@ import { MenuComponent } from './menu/menu.component';
 @NgModule({
   declarations: [ //this will contain the names of the components used by my app
     AppComponent,
-    MenuComponent //added automatically after giving `ng g component Menu` command in my app folder
+    MenuComponent //added automatically after giving `ng g component Menu` command in my app folder (the command will also create the menu folder with all its content)
   ],
   imports: [
     BrowserModule //this will contain a series of important directives so it's always good to have it (imported by default)
