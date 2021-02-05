@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'MetroChat';
+  title = 'MetroChat'; //this will be replaced each time I use {{title}} in my pages
 }
