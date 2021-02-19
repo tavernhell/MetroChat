@@ -10,9 +10,9 @@ export class TrainsComponent implements OnInit {
   metrolist: Metro[] = [];
 
   constructor() {
-    this.metrolist.push(new Metro('ASD','Red',32,125000));
-    this.metrolist.push(new Metro('AKE','Green',29,145000));
-    this.metrolist.push(new Metro('ASD','Yellow',47,155000));
+    this.metrolist.push({ idt: 'ASD', line: 'Red', numChatting: 32, waitTime: 125000 });
+    this.metrolist.push({ idt: 'AKE', line: 'Green', numChatting: 29, waitTime: 145000 });
+    this.metrolist.push({ idt: 'ASD', line: 'Yellow', numChatting: 47, waitTime: 155000 });
   }
 
   ngOnInit() {
