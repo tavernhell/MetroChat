@@ -6,14 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./trains.component.css']
 })
 export class TrainsComponent implements OnInit {
-  metrolist: { idt: string; line: string; numchatting: number; time: number; }[];
+  metrolist: { idt: string; line: string; numChatting: number; waitTime: number; }[];
 
   constructor() {
     this.metrolist =
     [
-      {idt:'ASD', line:'Red', numchatting:32, time:125000},
-      {idt:'AKE', line:'Green', numchatting:29, time:145000},
-      {idt:'ASD', line:'Yellow', numchatting:47, time:155000},
+      {idt:'ASD', line:'Red', numChatting:32, waitTime:125000},
+      {idt:'AKE', line:'Green', numChatting:29, waitTime:145000},
+      {idt:'ASD', line:'Yellow', numChatting:47, waitTime:155000},
     ];
   }
 
