@@ -16,11 +16,11 @@ export class MenuComponent implements OnInit {
     this.linkMenu1 = 'Trains';
     this.linkMenu2 = 'Favorites';
     this.linkMenu3 = 'Login';
-  } //it is good practice to initalise the variables inside the constructor
+  } //it is good practice to initalise the variables inside the constructor, but it's also possible to do that during the declaration
 
   //! NOTE: at the moment, these properties can be only used inside the menu template and not in components that extends it or that it implements
 
-  ngOnInit() { //this is the first method that will be called after the constructor. it can only be called ONCE per class and it's used to initalie some internal properties or to call methods of a certain service
+  ngOnInit() { //this is the first method that will be called after the constructor. it can only be called ONCE per class and it's used to initalize some internal properties or to call methods of a certain service
 
   }
 

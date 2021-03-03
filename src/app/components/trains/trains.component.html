@@ -1,9 +1,4 @@
 <div class="trainlist">
-  <ul>
-    <li *ngFor="let metro of metrolist">
-      <h2>{{metro.line}}</h2>
-      <p>{{metro.idt}}</p>
-      <p>Departure in: {{metro.waitTime}}</p>
-    </li>
-  </ul>
+  <!-- the metro on the right of dataIn refers to the metro of metrolist -->
+  <mc-metro *ngFor = "let metro of metrolist" [metro]="metro" [now]="now"></mc-metro>
 </div>

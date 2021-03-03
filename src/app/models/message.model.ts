@@ -5,6 +5,6 @@ export class Message {
     public idt: string, //train id
     public idu: string, //user id
     public text: string, //message text
-    public idr?: string, //optiona id of receiver
+    public idr?: string, //optional id of receiver
   ) {}
 }
