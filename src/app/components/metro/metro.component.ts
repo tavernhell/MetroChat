@@ -9,7 +9,7 @@ import { Metro } from '../../models/metro.model'; //manually imported
 })
 export class MetroComponent implements OnInit {
   @Input() metro: Metro;
-  @Input() now: Metro;
+  @Input() now: number;
   constructor() { }
 
   ngOnInit() {

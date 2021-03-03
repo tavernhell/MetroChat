@@ -1,4 +1,8 @@
 <div class="trainlist">
   <!-- the metro on the right of dataIn refers to the metro of metrolist -->
-  <mc-metro *ngFor = "let metro of metrolist" [metro]="metro" [now]="now"></mc-metro>
+  <mc-metro *ngFor = "let metro of metroList"
+            [metro]="metro"
+            [now]="now"
+            (click)="setMetro(metro)"></mc-metro>
+  <mc-traindetails [train]="selectedTrain"></mc-traindetails>
 </div>

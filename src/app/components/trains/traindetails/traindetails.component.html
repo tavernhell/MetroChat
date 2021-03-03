@@ -1,0 +1,7 @@
+<!-- This will be only shown if the train has been clicked, because of (click)="setMetro(metro)" train won't be null, and so the if will evaluate to true -->
+<div *ngIf="train">
+  <h1>Train Detail</h1>
+  <p>ID: {{train.idt}}</p>
+  <p>Line: {{train.line}}</p>
+  <button (click)="closeDetail()">Close detail</button>
+</div>

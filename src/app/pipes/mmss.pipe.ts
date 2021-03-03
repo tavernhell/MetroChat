@@ -8,7 +8,7 @@ export class MmssPipe implements PipeTransform {
   seconds: number;
   countdown: string;
 
-  //waitTime is the value of the variable that I'll call the pipe on, args are possible extra parameters (like in date : 'shortDate)
+  //waitTime is the value of the variable that I'll call the pipe on, args are possible extra parameters (like in date : 'shortDate')
   transform(waitTime: number, args?: any): string {
     this.minutes = Math.floor(waitTime / 60000);
     this.seconds = Math.floor((waitTime - this.minutes * 60000) / 1000);
