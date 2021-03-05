@@ -6,16 +6,19 @@ import { Metro } from '../../models/metro.model'; //manually imported
   templateUrl: './trains.component.html',
   styleUrls: ['./trains.component.css']
 })
+
 export class TrainsComponent implements OnInit {
   metroList: Metro[] = [];
   selectedTrain: Metro;
   now: number;
+  departedTrains: string;
 
   constructor() {
     this.metroList.push({ idt: 'ASD', line: 'Red', numChatting: 32, waitTime: 125000 });
     this.metroList.push({ idt: 'AKE', line: 'Green', numChatting: 29, waitTime: 145000 });
     this.metroList.push({ idt: 'ASD', line: 'Yellow', numChatting: 47, waitTime: 155000 });
     this.now = new Date().getTime();
+    this.departedTrains = '';
   }
 
   ngOnInit() {
@@ -25,4 +28,7 @@ export class TrainsComponent implements OnInit {
     this.selectedTrain = t;
   }
 
+  updateDepartedTrains (id:string) {
+    this.departedTrains += `|${id}`
+  }
 }

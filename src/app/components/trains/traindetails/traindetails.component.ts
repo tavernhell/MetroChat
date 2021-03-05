@@ -14,8 +14,8 @@ export class TraindetailsComponent implements OnInit {
   ngOnInit() {
   }
 
+  //this will make the if in the template to avaluate to false, and the div won't be shown
   closeDetail() {
     this.train = null;
   }
-
 }

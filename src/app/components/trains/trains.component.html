@@ -1,8 +1,10 @@
 <div class="trainlist">
   <!-- the metro on the right of dataIn refers to the metro of metrolist -->
   <mc-metro *ngFor = "let metro of metroList"
+            (departing)="updateDepartedTrains($event)"
             [metro]="metro"
             [now]="now"
             (click)="setMetro(metro)"></mc-metro>
+  <!-- when the departing event verifies, call the departed method  -->
   <mc-traindetails [train]="selectedTrain"></mc-traindetails>
 </div>

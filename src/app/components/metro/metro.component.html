@@ -1,2 +1,5 @@
-<p>Line: {{ metro.line }}</p>
-<p>Wait time: {{ metro.waitTime }}</p>
+<div [ngStyle]="state">
+  <p>Line: {{ metro.line }}</p>
+  <p>Wait time: {{ metro.waitTime }}</p>
+  <p>{{ waitTime | mmss }}</p>
+</div>
