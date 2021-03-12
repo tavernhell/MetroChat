@@ -12,6 +12,5 @@
             [metro]="metro"
             [now]="now"
             (click)="setMetro(metro)"></mc-metro>
-  <!-- when the departing event verifies, call the updateDepartedTrains method  -->
-  <mc-traindetails [train]="selectedTrain"></mc-traindetails>
+  <div *ngIf="errorMsg">{{errorMsg}}</div>
 </div>

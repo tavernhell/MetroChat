@@ -19,16 +19,17 @@ export class MetroComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    //set departureTime to ms
-    this.departureTime = this.metro.waitTime;
+    //set departureTime to ms: the API retuns data in Italian language, so I have to access it with italian name
+    this.departureTime = this.metro.tempo;
     //time remaining for departure
     this.waitTime = this.departureTime - this.now;
+    debugger;
     let x = setInterval(() => {
       this.waitTime  -= 1000;
       if (this.waitTime <=0) {
         //interrupt the timer and send the event
         clearInterval(x);
-        //this will emit the id of the train
+        //emit the id of the train
         this.departing.emit(this.metro.idt);
         //modify the state of the component (aka the CSS)
         this.state = {'display' : 'none'};

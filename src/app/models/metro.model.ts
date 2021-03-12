@@ -1,6 +1,10 @@
+//before implementing interfaces, I've decided to adapted the model's parameters to the language the API returns them
 export class Metro {
   idt: string;
-  line: string;
-  numChatting: number;
-  waitTime: number;
+  linea: string;
+  direzione: string;
+  numchatting: number;
+  tempo: number;
+  stazione: string;
+  carrozza: string;
 }

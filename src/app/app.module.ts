@@ -10,6 +10,7 @@ import { MetroComponent } from './components/metro/metro.component';
 import { TraindetailsComponent } from './components/trains/traindetails/traindetails.component';
 import { RouterModule } from '@angular/router';
 import { Error404Component } from './error404/error404.component';
+import { HttpClientModule } from '@angular/common/http';
 
 //there must be ONLY ONE AppModule file per Application
 
@@ -33,7 +34,8 @@ import { Error404Component } from './error404/error404.component';
         { path: '', redirectTo: '/arriving', pathMatch:'full' }, //this will redirect to the arriving path route
         { path: '**', component: Error404Component } //for every path that is not defined
       ]
-    )
+    ),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent] //bootstrap will contain the first component that will be loaded

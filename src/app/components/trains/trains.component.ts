@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { TrainService } from 'src/app/services/train.service';
 import { Metro } from '../../models/metro.model'; //manually imported
 
 @Component({
@@ -12,16 +14,25 @@ export class TrainsComponent implements OnInit {
   selectedTrain: Metro;
   now: number;
   departedTrains: string;
+  errorMsg;
 
-  constructor() {
-    this.metroList.push({ idt: 'ASD', line: 'Red', numChatting: 32, waitTime: 125000 });
-    this.metroList.push({ idt: 'AKE', line: 'Green', numChatting: 29, waitTime: 145000 });
-    this.metroList.push({ idt: 'ASD', line: 'Yellow', numChatting: 47, waitTime: 155000 });
+  //inject the Service
+  constructor(private router: Router, private trainService: TrainService) {
+    this.metroList = [];
     this.now = new Date().getTime();
     this.departedTrains = '';
   }
 
   ngOnInit() {
+    this.getListaMetro();
+  }
+
+  getListaMetro() {
+    this.trainService.getMetroList()
+                     .subscribe(
+                        response => this.metroList = response,
+                        error => this.errorMsg = error
+                     );
   }
 
   setMetro(t) {
