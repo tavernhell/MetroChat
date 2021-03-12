@@ -1,3 +1,10 @@
+<mc-menu></mc-menu>
+<div style="text-align:center">
+  <h1>
+    Welcome!
+  </h1>
+</div>
+
 <div class="trainlist">
   <!-- the metro on the right of dataIn refers to the metro of metrolist -->
   <mc-metro *ngFor = "let metro of metroList"
@@ -5,6 +12,6 @@
             [metro]="metro"
             [now]="now"
             (click)="setMetro(metro)"></mc-metro>
-  <!-- when the departing event verifies, call the departed method  -->
+  <!-- when the departing event verifies, call the updateDepartedTrains method  -->
   <mc-traindetails [train]="selectedTrain"></mc-traindetails>
 </div>

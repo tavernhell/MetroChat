@@ -8,6 +8,8 @@ import { MmssPipe } from './pipes/mmss.pipe';
 import { MessagesComponent } from './components/messages/messages.component';
 import { MetroComponent } from './components/metro/metro.component';
 import { TraindetailsComponent } from './components/trains/traindetails/traindetails.component';
+import { RouterModule } from '@angular/router';
+import { Error404Component } from './error404/error404.component';
 
 //there must be ONLY ONE AppModule file per Application
 
@@ -20,10 +22,18 @@ import { TraindetailsComponent } from './components/trains/traindetails/traindet
     MmssPipe,
     MessagesComponent,
     MetroComponent,
-    TraindetailsComponent
+    TraindetailsComponent,
+    Error404Component
   ],
   imports: [
-    BrowserModule //this will contain a series of important directives so it's always good to have it (imported by default)
+    BrowserModule, //this will contain a series of important directives so it's always good to have it (imported by default)
+    RouterModule.forRoot(
+      [
+        { path: 'arriving', component: TrainsComponent }, //this will show TrainsComponent in the template where "<router-outlet></router-outlet>" appears
+        { path: '', redirectTo: '/arriving', pathMatch:'full' }, //this will redirect to the arriving path route
+        { path: '**', component: Error404Component } //for every path that is not defined
+      ]
+    )
   ],
   providers: [],
   bootstrap: [AppComponent] //bootstrap will contain the first component that will be loaded
